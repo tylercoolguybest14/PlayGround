@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#241422" />
+    <title>Topple Trouble — Carnival Stack-Up</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="stage" aria-label="3D carnival can-stacking game"></div>
+      <div class="shade"></div>
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Topple Trouble home"><span class="brand-star">✦</span><span>TOPPLE<span class="brand-light">TROUBLE</span></span></a>
+        <div class="top-right"><span class="live-dot"></span><span>THE MIDWAY · GAME 07</span><span class="sound-icon" aria-hidden="true">♫</span></div>
+      </header>
+      <main class="game-layout">
+        <section class="intro">
+          <div class="eyebrow"><span>★</span> STEP RIGHT UP <span>★</span></div>
+          <h1>Stack it.<br /><em>Don’t splash it.</em></h1>
+          <p class="lede">Six cans &amp; bottles. One wobbly pyramid.<br class="desktop-break" /> Keep your cool and claim the big prize.</p>
+          <div class="score-row">
+            <div class="score-card"><span class="card-label">STACK</span><strong id="stack-count">0<span class="count-total"> / 6</span></strong><div class="stack-pips" id="stack-pips"></div></div>
+            <div class="score-card prize-card"><span class="card-label">ON THE LINE</span><strong id="prize-name">★ Plush pal</strong><small>or <b>$50</b> in midway cash</small></div>
+          </div>
+          <div class="tip-card"><span class="tip-icon">💧</span><span><b>Watch the slosh!</b><br />Bottles wobble more. Hold <kbd>SPACE</kbd> or the steady button to calm the stack.</span></div>
+        </section>
+        <section class="play-area" aria-label="Game controls">
+          <div class="game-tag"><span class="tag-star">✦</span> THE GREAT STACK-UP <span class="tag-star">✦</span></div>
+          <div class="canvas-frame"><div id="stage-inner"></div><div class="canvas-hint" id="canvas-hint">YOUR PYRAMID STARTS HERE</div><div class="toast" id="toast" role="status" aria-live="polite"></div></div>
+          <div class="game-controls">
+            <div class="piece-preview"><div class="piece-badge" id="piece-badge"><span>🥫</span></div><div class="piece-copy"><span class="next-label">NEXT UP</span><strong id="piece-name">Lucky can</strong><small id="piece-note">Nice and steady</small></div></div>
+            <div class="control-buttons"><button class="steady-btn" id="steady-btn" type="button" aria-label="Hold to steady the stack"><span class="steady-rings">◎</span><span>STEADY</span><small>HOLD</small></button><button class="drop-btn" id="drop-btn" type="button"><span id="drop-label">DROP PIECE</span><span class="drop-arrow">↗</span></button></div>
+          </div>
+          <div class="progress-track"><div class="progress-fill" id="stability-fill"></div><span class="progress-caption" id="status-text">READY WHEN YOU ARE</span></div>
+          <div class="instructions"><span>① DROP A PIECE</span><i>·</i><span>② STEADY THE WOBBLE</span><i>·</i><span>③ WIN YOUR PRIZE</span></div>
+        </section>
+      </main>
+      <footer class="footer"><span>✦ MADE FOR BRAVE STACKERS ✦</span><button id="sound-toggle" type="button" aria-label="Toggle sound">SOUND <span id="sound-state">OFF</span></button><button id="reset-btn" type="button">↻ &nbsp;NEW GAME</button></footer>
+      <div class="win-overlay" id="win-overlay" aria-hidden="true"><div class="win-card"><div class="win-confetti">✦　★　✦</div><p class="eyebrow">YOU DID IT!</p><h2>Stack-tacular!</h2><p>Your pyramid stood tall. Pick a prize, champ.</p><div class="prize-choices"><button class="prize-choice" data-prize="Plush pal"><span>🧸</span><b>Plush pal</b></button><button class="prize-choice" data-prize="$50 cash"><span>💵</span><b>$50 cash</b></button></div><button id="play-again" class="again-btn">PLAY AGAIN ↗</button></div></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
