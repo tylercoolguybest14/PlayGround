@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Drift</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="hud">
+        <div class="stat">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat">
+          <span>Hull</span>
+          <strong id="health">5</strong>
+        </div>
+        <div class="stat">
+          <span>Time</span>
+          <strong id="time">60</strong>
+        </div>
+      </div>
+
+      <div id="message-panel" class="visible">
+        <div class="panel-card">
+          <p class="eyebrow">Sector 7 // Rescue Run</p>
+          <h1 id="overlay-title">Star Drift</h1>
+          <p id="overlay-text">Collect energy cores and survive the meteor storm for 60 seconds.</p>
+          <button id="start-button" type="button">Start Mission</button>
+        </div>
+      </div>
+
+      <div id="game-root"></div>
+
+      <div id="touch-controls" aria-label="Touch controls">
+        <div class="touch-row">
+          <button class="control" data-key="KeyW" aria-label="Move up">↑</button>
+        </div>
+        <div class="touch-row middle">
+          <button class="control" data-key="KeyA" aria-label="Move left">←</button>
+          <button class="control" data-key="KeyS" aria-label="Move down">↓</button>
+          <button class="control" data-key="KeyD" aria-label="Move right">→</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -4,6 +4,9 @@
   "description": "<!-- omgithub:readme:start --> ## 🚀 Build, play, and remix with OMGithub",
   "main": "index.js",
   "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "start": "vite --host 0.0.0.0 --port 3000",
+    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
